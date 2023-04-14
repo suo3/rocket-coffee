@@ -22,8 +22,7 @@ export const Standard = {
         onAddToCart:()=>{ return "added to cart"},
         imageUrl:"https://source.unsplash.com/tNALoIZhqVM/200x100/",
         isSoldOut:false,
-        isOnSale:true
-        //backgroundColor: {control:'color'}
+        backgroundColor: {control:'color'}
 }
 }
 
@@ -34,8 +33,7 @@ export const SoldOut = {
         onAddToCart: ()=>{return "disabled";},
         imageUrl:"https://source.unsplash.com/tNALoIZhqVM/200x100",
         isSoldOut:true,
-        isOnSale:false,
-        backgroundColor: '#e8f6ff'
+        backgroundColor: {control:'color'}
     } 
 }
 

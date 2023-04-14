@@ -34,7 +34,6 @@ export const SoldOut = {
         onAddToCart: ()=>{return "disabled";},
         imageUrl:"https://source.unsplash.com/tNALoIZhqVM/200x100",
         isSoldOut:true,
-        isOnSale:false,
         backgroundColor: '#e8f6ff'
     } 
 }

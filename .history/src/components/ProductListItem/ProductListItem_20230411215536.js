@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './ProductListItem.css';
+import { Disabled } from './../../../.history/src/components/ProductListItem/ProductListItem.stories_20230410211627';
 
 
 export const ProductListItem = ({name, price, imageUrl, onAddToCart, isSoldOut,isOnSale,backgroundColor}) => {
   return (
-   <Card highlight={isOnSale} backgroundColor={backgroundColor}>
+   <Card highlight={isOnSale}>
     <Heading>
       {name} {isOnSale && "(On Sale"}
     </Heading>
@@ -25,9 +26,9 @@ function Heading({children}) {
 function Text({children}) {
 return<span>{children}</span>
 }
-function Card({children,highlight, backgroundColor}) {
+function Card({children,highlight}) {
   const cardClassName = highlight ? "card sale":"card";
-  return <div className={cardClassName} style={{backgroundColor:backgroundColor}}>{children}</div>
+  return <div className={cardClassName}>{children}</div>
 }
 function Button({onClick, children}) {
   return <button onClick={onClick}>{children}</button>
@@ -51,7 +52,6 @@ price: PropTypes.number,
 imageUrl: PropTypes.string,
 onAddToCart: PropTypes.func.isRequired,
 isSoldOut:PropTypes.bool,
-isOnSale: PropTypes.bool, 
 backgroundColor: PropTypes.string
 }
 
@@ -60,7 +60,6 @@ ProductListItem.defaultProps = {
     price: 0,
     imageUrl: 'https://',
     onAddToCart: undefined,
-    isOnSale:false,
     isSoldOut:false,
     backgroundColor:null
 }

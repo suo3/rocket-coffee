@@ -5,7 +5,7 @@ import './ProductListItem.css';
 
 export const ProductListItem = ({name, price, imageUrl, onAddToCart, isSoldOut,isOnSale,backgroundColor}) => {
   return (
-   <Card highlight={isOnSale} backgroundColor={backgroundColor}>
+   <Card highlight={isOnSale} style={{backgroundColor:backgroundColor}}>
     <Heading>
       {name} {isOnSale && "(On Sale"}
     </Heading>

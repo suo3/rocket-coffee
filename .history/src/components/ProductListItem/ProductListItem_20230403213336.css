@@ -11,6 +11,3 @@
     padding: 8px;
     border-radius: 4px;
 }
-.card small::before {
-    content: "$"
-}
