@@ -22,25 +22,14 @@ export const Standard = {
 }
 }
 
-export const OnSale = {
-    args: {
-        name:"Pizza",
-        price:6.50,
-        onAddToCart: ()=>{return "disabled";},
-        imageUrl:"https://source.unsplash.com/tNALoIZhqVM/200x100",
-        isSoldOut:false,
-        isOnSale:true,
-        backgroundColor: '#e8f6ff'
-    } 
-}
 export const SoldOut = {
     args: {
         name:"Rice is out",
-        price:2.50,
+        price:300,
         onAddToCart: ()=>{return "disabled";},
         imageUrl:"https://source.unsplash.com/tNALoIZhqVM/200x100",
         isSoldOut:true,
-        isOnSale:false,
+        isOnSale:true,
         backgroundColor: '#e8f6ff'
     } 
 }

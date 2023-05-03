@@ -35,10 +35,10 @@ backgroundColor: PropTypes.string
 
 ProductListItem.defaultProps = {
     name: 'Product',
-    price: 10,
+    price: 0,
     imageUrl: 'https://',
-    onAddToCart: ()=>{},
+    onAddToCart: undefined,
     isOnSale:false,
     isSoldOut:false,
-    backgroundColor:'#000000'
+    backgroundColor:null
 }

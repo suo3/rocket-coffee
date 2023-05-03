@@ -33,7 +33,7 @@ isOnSale: PropTypes.bool,
 backgroundColor: PropTypes.string
 }
 
-ProductListItem.defaultProps = {
+/* ProductListItem.defaultProps = {
     name: 'Product',
     price: 10,
     imageUrl: 'https://',
@@ -41,4 +41,4 @@ ProductListItem.defaultProps = {
     isOnSale:false,
     isSoldOut:false,
     backgroundColor:'#000000'
-}
+} */

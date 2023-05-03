@@ -11,10 +11,10 @@ export const ProductListItem = ({name, price, imageUrl, onAddToCart, isSoldOut,i
   return (
    <Card highlight={isOnSale} backgroundColor={backgroundColor}>
     <Heading>
-     {isOnSale ? name + "(On Sale)" : name}
+      {name} {isOnSale && "(On Sale"}
     </Heading>
     <img src={imageUrl} alt="" />
-    <Text>{price}</Text>
+    <Text>{name}</Text>
     <Button onClick={onAddToCart} disabled={isSoldOut}>
       {isSoldOut ?"Sold out":"Add to Cart"}
     </Button>
@@ -35,10 +35,10 @@ backgroundColor: PropTypes.string
 
 ProductListItem.defaultProps = {
     name: 'Product',
-    price: 10,
+    price: 0,
     imageUrl: 'https://',
-    onAddToCart: ()=>{},
+    onAddToCart: undefined,
     isOnSale:false,
     isSoldOut:false,
-    backgroundColor:'#000000'
+    backgroundColor:null
 }
